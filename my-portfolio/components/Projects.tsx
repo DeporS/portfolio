@@ -62,11 +62,11 @@ const Projects = () => {
           delay: 5000, // 3 secs per slide
           disableOnInteraction: false,
         }}
-        className="w-full max-w-4xl mb-10"
+        className="w-full max-w-lg sm:max-w-2xl md:max-w-4xl px-4"
       >
         {projects.map((project, index) => (
-          <SwiperSlide key={index}>
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-left min-w-[300px] sm:min-w-[400px] md:min-w-[500px]">
+          <SwiperSlide key={index} className="">
+            <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-left min-w-[300px] sm:min-w-[400px] md:min-w-[500px] mx-4">
               <h3 className="text-xl font-semibold">{project.name}</h3>
               <p className="text-sm mt-2">{project.description}</p>
               <a
@@ -83,7 +83,10 @@ const Projects = () => {
       </Swiper>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {projects.map((project, index) => (
-          <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div
+            key={index}
+            className="bg-gray-800 p-6 rounded-lg shadow-lg pl-4 pr-4"
+          >
             <h3 className="text-xl font-semibold">{project.name}</h3>
             <p className="text-sm mt-2">{project.description}</p>
             <a
