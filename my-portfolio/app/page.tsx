@@ -1,5 +1,6 @@
 import Image from "next/image";
-import About from "@/components/About";
+import AnimatedSection from "@/components/AnimatedSection";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
           Hi, I'm Krzysztof Matyla 👋
         </h1>
         <p className="text-lg sm:text-xl mt-4">
-          Python & Android Developer | Data Engineer
+          Data Engineer | Python & Android Developer
         </p>
         <div className="mt-6 flex gap-4">
           <a className="px-6 py-2 bg-blue-500 rounded-lg">CV</a>
@@ -22,8 +23,17 @@ export default function Home() {
         </div>
       </section>
 
-      <div>
-        <About />
+      <div className="flex flex-col items-center gap-100">
+        <AnimatedSection
+          id="aboutMe"
+          title="About Me"
+          content={[
+            "🎓 Computer Science Bachelor's student at Poznań University of Technology.",
+            "💻 Proficient in Python, Data Engineering, and Android development.",
+            "👩‍💻 Experienced with Oracle, Laravel, Hadoop, Jetpack Compose, and Docker.",
+          ]}
+        />
+        <Projects />
       </div>
     </main>
   );

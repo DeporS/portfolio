@@ -34,14 +34,14 @@ const About = () => {
       }`}
     >
       <h2 className="text-3xl font-bold">About Me</h2>
-      <p className="text-xl mt-4">
+      <p className="text-sm sm:text-lg mt-2">
         🎓 Computer Science Bachelor's student at Poznań University of
         Technology.
       </p>
-      <p className="text-lg mt-2">
+      <p className="text-sm sm:text-lg mt-2">
         💻 Proficient in Python, Data Engineering, and Android development.
       </p>
-      <p className="text-lg mt-2">
+      <p className="text-sm sm:text-lg mt-2">
         👩‍💻 Experienced with Oracle, Laravel, Hadoop, Jetpack Compose and Docker.
       </p>
     </section>
