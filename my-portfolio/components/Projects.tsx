@@ -59,14 +59,14 @@ const Projects = () => {
         slidesPerView="auto"
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 5000, // 3 secs per slide
+          delay: 5000,
           disableOnInteraction: false,
         }}
-        className="w-full max-w-lg sm:max-w-2xl md:max-w-4xl px-4"
+        className="w-full max-w-sm sm:max-w-2xl md:max-w-5xl"
       >
         {projects.map((project, index) => (
-          <SwiperSlide key={index} className="">
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-left min-w-[300px] sm:min-w-[400px] md:min-w-[500px] mx-4">
+          <SwiperSlide key={index} className="flex justify-center">
+            <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-left width-max max-w-sm sm:max-w-md md:max-w-5xl">
               <h3 className="text-xl font-semibold">{project.name}</h3>
               <p className="text-sm mt-2">{project.description}</p>
               <a
@@ -85,7 +85,7 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg pl-4 pr-4"
+            className="bg-gray-800 p-6 max-w-sm sm:max-w-2xl rounded-lg shadow-lg"
           >
             <h3 className="text-xl font-semibold">{project.name}</h3>
             <p className="text-sm mt-2">{project.description}</p>
