@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { FaPython, FaAndroid } from "react-icons/fa";
+import { FaPython, FaAndroid, FaJava } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import ProjectsTechnologies from "@/components/ProjectsTechnologies";
@@ -53,7 +53,7 @@ const projects = [
     link: "https://github.com/DeporS/kayssa",
   },
   {
-    name: "Android Authenticator",
+    name: "Product Authenticator App",
     description:
       "Mobile app using Jetpack Compose and Firebase for authentication.",
     link: "https://github.com/DeporS/android-auth",
@@ -63,28 +63,56 @@ const projects = [
 const python_projects = [
   {
     name: "Kayssa Chess Engine",
-    description: "A chess engine built in Python using the `chess` library.",
+    description:
+      "Kayssa is a personal chess engine project I’m developing as a hobby. Built with Python and the python-chess library, it aims to provide optimal move suggestions and position evaluations using either hard coded rules, or neural network models.",
     link: "https://github.com/DeporS/kayssa",
   },
   {
-    name: "Android Authenticator",
+    name: "RPG Game (In progress)",
     description:
-      "Mobile app using Jetpack Compose and Firebase for authentication.",
+      "A simple game with physics, enemies and inventory system. It uses SQLite to store player data, including items and inventory.",
+    link: "https://github.com/DeporS/RPG",
+  },
+  {
+    name: "Movement Checker",
+    description:
+      "A system designed for Arduino that allows people to enter secured areas at work, featuring an SQLite database and a website interface for system administrators.",
     link: "https://github.com/DeporS/android-auth",
+  },
+  {
+    name: "Algorithms",
+    description: "Implementations of tree and sorting algorithms in Python.",
+    link: "https://github.com/DeporS/Algorytmy",
   },
 ];
 
-const kotlin_projects = [
+const android_projects = [
   {
-    name: "Kayssa Chess Engine",
-    description: "A chess engine built in Python using the `chess` library.",
-    link: "https://github.com/DeporS/kayssa",
+    name: "Product Authenticator App",
+    description:
+      "An Android app in Kotlin for verifying product authenticity: generates unique codes for items, supports QR scanning, and checks originality via an external database. Includes login system.",
+    link: "https://github.com/DeporS/android-auth",
   },
   {
-    name: "Android Authenticator",
+    name: "Keystroke Dynamics App",
     description:
-      "Mobile app using Jetpack Compose and Firebase for authentication.",
-    link: "https://github.com/DeporS/android-auth",
+      "An Android app in Kotlin developed in collaboration with a colleague that collects data for training and testing, sends it to a server, receives the response, and displays the results. Built using Jetpack Compose and SQLite.",
+    link: "https://github.com/qkb2/KeystrokeDynamics",
+  },
+  {
+    name: "Sportsmans Essentials App",
+    description:
+      "An app built with Xamarin that helps athletes calculate their BMI, track gym records, access a meal recipe list, and features a 'personal trainer' powered by OpenAI. It also includes a barcode scanner that connects to food databases, allowing users to scan product barcodes for detailed information.",
+    link: "https://github.com/DeporS/SportsmansEssentialsApp",
+  },
+];
+
+const java_projects = [
+  {
+    name: "Football Data Processing Airflow",
+    description:
+      "A data engineering project used with Google Cloud Platform and Apache Airflow to process and analyze football player data. The pipeline incorporates MapReduce with a combiner for efficient data aggregation, filtering, and statistical analysis, such as calculating the number of players across leagues, their average salaries, and ages.",
+    link: "https://github.com/DeporS/football-data-processing-airflow",
   },
 ];
 
@@ -161,10 +189,17 @@ const Projects = () => {
       />
 
       <ProjectsTechnologies
-        id={"kotlinProjects"}
-        title={"Kotlin Projects"}
-        projects={kotlin_projects}
-        icon={<FaAndroid className="w-20 h-20 text-white-400 mt-10" />}
+        id={"androidProjects"}
+        title={"Android Projects"}
+        projects={android_projects}
+        icon={<FaAndroid className="w-20 h-20 text-white-400 mt-30" />}
+      />
+
+      <ProjectsTechnologies
+        id={"javaProjects"}
+        title={"Java Projects"}
+        projects={java_projects}
+        icon={<FaJava className="w-20 h-20 text-white-400 mt-30" />}
       />
     </section>
   );
