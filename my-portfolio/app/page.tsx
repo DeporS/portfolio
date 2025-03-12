@@ -13,7 +13,12 @@ export default function Home() {
           Data Engineer | Python & Android Developer
         </p>
         <div className="mt-6 flex gap-4">
-          <a className="px-6 py-2 bg-blue-500 rounded-lg">CV</a>
+          <a
+            href="/pdf/CV_Krzysztof_Matyla.pdf"
+            className="px-6 py-2 bg-blue-500 rounded-lg"
+          >
+            My CV
+          </a>
           <a
             href="https://github.com/DeporS"
             className="px-6 py-2 border border-white rounded-lg"
