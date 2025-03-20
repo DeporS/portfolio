@@ -49,14 +49,14 @@ const AnimatedSection = ({ id, projects, icon }: AnimatedSectionProps) => {
     >
       {/*Icon*/}
       <div className="mb-10">{icon}</div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 col-start-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 grid-auto-dense">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 max-w-sm sm:max-w-2xl rounded-lg shadow-lg"
+            className="bg-gray-800 p-6 w-full flex flex-col justify-between rounded-lg shadow-lg"
           >
             <h3 className="text-xl font-semibold">{project.name}</h3>
-            <p className="text-sm mt-2">{project.description}</p>
+            <p className="text-sm mt-2 flex-grow">{project.description}</p>
             <a
               href={project.link}
               target="_blank"

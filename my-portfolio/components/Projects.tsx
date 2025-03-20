@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from "react";
 import { FaPython, FaAndroid, FaJava } from "react-icons/fa";
+import { SiCplusplus, SiDotnet } from "react-icons/si";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import ProjectsTechnologies from "@/components/ProjectsTechnologies";
@@ -116,6 +117,37 @@ const java_projects = [
   },
 ];
 
+const cpp_projects = [
+  {
+    name: "Flying UFO 3D Game",
+    description:
+      "Flying UFO 3D Game written in C++ using the OpenGL library, featuring realistic lighting effects, movement physics. The game allows players to control the UFO while navigating through various obstacles.",
+    link: "https://github.com/DeporS/Grafika",
+  },
+  {
+    name: "The Game of Chess",
+    description: "Object-oriented chess game implemented in C++.",
+    link: "https://github.com/DeporS/Chess",
+  },
+];
+
+const dot_net_projects = [
+  {
+    name: "Shoe Warehouse",
+    description:
+      "A desktop application in .NET for viewing, adding, and editing shoe models. It supports three data sources: a database, mock data, and a text file.",
+    link: "https://github.com/DeporS/dot-net-project",
+  },
+];
+
+const dummy_projects = [
+  {
+    name: "",
+    description: "",
+    link: "",
+  },
+];
+
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -200,6 +232,20 @@ const Projects = () => {
         title={"Java Projects"}
         projects={java_projects}
         icon={<FaJava className="w-20 h-20 text-white-400 mt-30" />}
+      />
+
+      <ProjectsTechnologies
+        id={".netProjects"}
+        title={".NET Projects"}
+        projects={dot_net_projects}
+        icon={<SiDotnet className="w-20 h-20 text-white-400 mt-30" />}
+      />
+
+      <ProjectsTechnologies
+        id={"cppProjects"}
+        title={"C++ Projects"}
+        projects={cpp_projects}
+        icon={<SiCplusplus className="w-20 h-20 text-white-400 mt-30" />}
       />
     </section>
   );

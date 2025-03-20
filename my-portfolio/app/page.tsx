@@ -1,6 +1,7 @@
 import Image from "next/image";
 import AnimatedSection from "@/components/AnimatedSection";
 import Projects from "@/components/Projects";
+import ScrollButtons from "@/components/ScrollButtons";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
             "👩‍💻 Experienced with Oracle, Laravel, Hadoop, Jetpack Compose, and Docker.",
           ]}
         />
+        <ScrollButtons />
         <Projects />
       </div>
     </main>
