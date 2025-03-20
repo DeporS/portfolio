@@ -15,7 +15,7 @@ export default function Home() {
         </p>
         <div className="mt-6 flex gap-4">
           <a
-            href="/pdf/CV_Krzysztof_Matyla.pdf"
+            href="/pdf/KrzysztofMatylaResume.pdf"
             className="px-6 py-2 bg-blue-500 rounded-lg"
           >
             My CV
