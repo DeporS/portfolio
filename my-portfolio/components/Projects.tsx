@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from "react";
 import { FaPython, FaAndroid, FaJava } from "react-icons/fa";
-import { SiCplusplus, SiDotnet } from "react-icons/si";
+import { SiCplusplus, SiDotnet, SiPhp } from "react-icons/si";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import ProjectsTechnologies from "@/components/ProjectsTechnologies";
@@ -140,6 +140,15 @@ const dot_net_projects = [
   },
 ];
 
+const php_projects = [
+  {
+    name: "Speedway Typer Full Stack",
+    description:
+      "Laravel app to track user progress in speedway events: manage race cards, calculate points, display rankings, and showcase trophies.",
+    link: "https://github.com/DeporS/KartaTypera",
+  },
+];
+
 const dummy_projects = [
   {
     name: "",
@@ -225,6 +234,13 @@ const Projects = () => {
         title={"Android Projects"}
         projects={android_projects}
         icon={<FaAndroid className="w-20 h-20 text-white-400 mt-30" />}
+      />
+
+      <ProjectsTechnologies
+        id={"phpProjects"}
+        title={"PHP Projects"}
+        projects={php_projects}
+        icon={<SiPhp className="w-20 h-20 text-white-400 mt-30" />}
       />
 
       <ProjectsTechnologies

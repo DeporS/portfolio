@@ -53,7 +53,7 @@ const AnimatedSection = ({ id, projects, icon }: AnimatedSectionProps) => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 w-full flex flex-col justify-between rounded-lg shadow-lg"
+            className="bg-gray-800 p-6 w-full flex flex-col justify-between rounded-lg shadow-lg col-start-2"
           >
             <h3 className="text-xl font-semibold">{project.name}</h3>
             <p className="text-sm mt-2 flex-grow">{project.description}</p>
